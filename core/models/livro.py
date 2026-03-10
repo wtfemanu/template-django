@@ -7,4 +7,4 @@ class Livro(models.Model):
     preco = models.DecimalField(max_digits=7, decimal_places=2, default=0)
 
     def __str__(self):
-        return f'({self.id}) {self.titulo} ({self.quantidade})'
+        return f"({self.id}) {self.titulo} ({self.quantidade})"

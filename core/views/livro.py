@@ -5,5 +5,5 @@ from core.serializers import LivroSerializer
 
 
 class LivroViewSet(ModelViewSet):
-    queryset = Livro.objects.all
+    queryset = Livro.objects.all()
     serializer_class = LivroSerializer
