@@ -1,3 +1,5 @@
+from posixpath import basename
+
 from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import (
@@ -7,13 +9,15 @@ from drf_spectacular.views import (
 )
 from rest_framework.routers import DefaultRouter
 
-from core.views import CategoriaViewSet, UserViewSet, EditoraViewSet
+from core.views import AutorViewSet, CategoriaViewSet, LivroViewSet, UserViewSet, EditoraViewSet
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
-router.register(r'editora', EditoraViewSet, basename='Editora')
+router.register(r'editora', EditoraViewSet, basename='editora')
+router.register(r'autor', AutorViewSet, basename='autor')
+router.register(r'livro', LivroViewSet, basename='livro')
 
 
 urlpatterns = [
